@@ -1,44 +1,31 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    /* Modules */
+    "module": "CommonJS", // Le système de module utilisé par Node.js.
+    "rootDir": "./src", // Indique où sont nos fichiers sources (nous allons créer ce dossier).
+    "outDir": "./dist", // Indique où seront placés les fichiers JavaScript compilés.
+    "moduleResolution": "node", // Comment le compilateur trouve les modules.
+    /* Émissions */
+    "target": "es2020", // Cible la version ECMAScript que Node.js peut exécuter.
+    "esModuleInterop": true, // Améliore l'interopérabilité des imports/exports CommonJS et ES Modules (important pour Express).
+    "forceConsistentCasingInFileNames": true, // Assure l'uniformité des noms de fichiers.
+    /* Typage */
+    "strict": true, // Active toutes les vérifications de type strictes (fortement recommandé, comme en Java).
+    "skipLibCheck": true, // Ignore les vérifications de type pour les librairies installées (accélère la compilation).
+    "resolveJsonModule": true, // Permet l'importation de fichiers JSON.
+    "sourceMap": true, // Génère les 'source maps' pour le debugging.
+    /* Chemin des fichiers */
+    "baseUrl": ".",
+    "paths": { // Permet les imports absolus, comme des packages Java (e.g., '@config/*').
+      "@root/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ], // Quels fichiers compiler.
+  "exclude": [
+    "node_modules"
+  ] // Quels dossiers ignorer.
 }
