@@ -20,6 +20,9 @@
       "@controllers/*": [
         "controllers/*"
       ], // Le chemin virtuel @controllers pointe vers ./src/controllers
+      "@schemas/*": [
+        "schemas/*"
+      ],
       "@services/*": [
         "services/*"
       ], // @services pointe vers ./src/services

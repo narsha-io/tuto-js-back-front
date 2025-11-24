@@ -1,5 +1,6 @@
 
-import { Todo, TodoCreation } from '@interfaces/todo';
+import { Todo } from '@interfaces/todo';
+import { TodoCreation } from 'schemas/todo.schema';
 
 const todos: Todo[] = [
     {

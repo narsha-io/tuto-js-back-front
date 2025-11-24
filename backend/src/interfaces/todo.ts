@@ -6,9 +6,3 @@ export interface Todo {
     createdBy: string;
     isCompleted?: boolean;
 }
-
-
-export interface TodoCreation {
-    title: string;
-    content: string;
-}

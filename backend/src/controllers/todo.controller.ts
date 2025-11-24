@@ -1,7 +1,7 @@
 
 import { Request, Response } from 'express';
 import { todoService } from '@services/todo.service';
-import { TodoCreation } from '@interfaces/todo';
+import { TodoCreation } from '@schemas/todo.schema';
 
 // Similaire à un @Controller en Spring/Java
 export class TodoController {
@@ -29,14 +29,6 @@ export class TodoController {
         try {
             // Le corps de la requête est casté en notre DTO pour le typage.
             const creationDto: TodoCreation = req.body;
-
-            // 1. Validation de base (à étendre)
-            if (!creationDto.title || !creationDto.content) {
-                res.status(400).json({
-                    message: "Le titre, le contenu sont obligatoires."
-                });
-                return;
-            }
 
             // 2. Appel au service pour créer le Todo
             const newTodo = await todoService.create(creationDto);
