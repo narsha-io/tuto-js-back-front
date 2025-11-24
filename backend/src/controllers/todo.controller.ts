@@ -31,8 +31,16 @@ export class TodoController {
         // 2. Appel au service pour créer le Todo
         const newTodo = await todoService.create(creationDto);
 
-        // 3. Envoi de la réponse HTTP 201 (Created)
-        res.status(201).json(newTodo);
+        // 2. Construire l'URL de la nouvelle ressource
+        // Assurez-vous que newTodo.id existe et est un nombre/string
+        const locationUrl = `/api/todos/${newTodo.id}`;
+
+        // 3. ENVOI DE LA RÉPONSE
+        // Utiliser res.status(201).location(locationUrl).json(newTodo)
+        // C'est la méthode la plus élégante et chaînable d'Express.
+        res.status(201)
+            .location(locationUrl) // 👈 Ajout du header 'Location'
+            .json(newTodo);
     }
 }
 
