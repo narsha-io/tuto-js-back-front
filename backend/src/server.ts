@@ -1,9 +1,10 @@
 // backend/src/server.ts (Mise à jour)
 
+import 'module-alias/register';
 import express from 'express';
 // 1. Importer le routeur que nous venons de créer
 import todoRoutes from '@routes/todo.routes';
-import { errorHandler } from 'middlewares/error.middleware';
+import { errorHandler } from '@middlewares/error.middleware';
 
 const app = express();
 const PORT = 3000;

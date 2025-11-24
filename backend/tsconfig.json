@@ -31,6 +31,9 @@
       ], // @interfaces pointe vers ./src/interfaces
       "@routes/*": [
         "routes/*"
+      ], // @routes pointe vers ./src/routes
+      "@middlewares/*": [
+        "middlewares/*"
       ] // @routes pointe vers ./src/routes
     },
   },
@@ -39,5 +42,5 @@
   ], // Quels fichiers compiler.
   "exclude": [
     "node_modules"
-  ] // Quels dossiers ignorer.
+  ], // Quels dossiers ignorer.,
 }

@@ -1,4 +1,3 @@
-// backend/src/middlewares/validation.middleware.ts (Correction Finale et Définitive)
 
 import { Request, Response, NextFunction } from 'express';
 import { ZodObject, ZodError } from 'zod';

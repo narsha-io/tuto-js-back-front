@@ -2,7 +2,7 @@
 
 import { Router } from 'express';
 import { todoController } from '@controllers/todo.controller';
-import { validateBody } from 'middlewares/validation.middleware';
+import { validateBody } from '@middlewares/validation.middleware';
 import { TodoCreationSchema } from '@schemas/todo.schema';
 
 // Création d'un Router Express
