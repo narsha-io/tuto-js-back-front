@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "dev": "ts-node-dev src/server.ts",
+    "start": "ts-node -r tsconfig-paths/register src/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/server.ts",
     "build": "tsc"
   },
   "keywords": [],
@@ -12,13 +12,27 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-async-errors": "^3.1.1",
+    "express-async-handler": "^1.2.0",
+    "module-alias": "^2.2.3",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
+  },
+  "_moduleAliases": {
+    "@routes": "dist/routes",
+    "@controllers": "dist/controllers",
+    "@services": "dist/services",
+    "@interfaces": "dist/interfaces",
+    "@schemas": "dist/schemas",
+    "@middlewares": "dist/middlewares",
+    "@lib": "dist/lib"
   }
 }

@@ -15,17 +15,32 @@
     "resolveJsonModule": true, // Permet l'importation de fichiers JSON.
     "sourceMap": true, // Génère les 'source maps' pour le debugging.
     /* Chemin des fichiers */
-    "baseUrl": ".",
-    "paths": { // Permet les imports absolus, comme des packages Java (e.g., '@config/*').
-      "@root/*": [
-        "./src/*"
-      ]
-    }
+    "baseUrl": "src",
+    "paths": {
+      "@controllers/*": [
+        "controllers/*"
+      ], // Le chemin virtuel @controllers pointe vers ./src/controllers
+      "@schemas/*": [
+        "schemas/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ], // @services pointe vers ./src/services
+      "@interfaces/*": [
+        "interfaces/*"
+      ], // @interfaces pointe vers ./src/interfaces
+      "@routes/*": [
+        "routes/*"
+      ], // @routes pointe vers ./src/routes
+      "@middlewares/*": [
+        "middlewares/*"
+      ] // @routes pointe vers ./src/routes
+    },
   },
   "include": [
     "src/**/*"
   ], // Quels fichiers compiler.
   "exclude": [
     "node_modules"
-  ] // Quels dossiers ignorer.
+  ], // Quels dossiers ignorer.,
 }
