@@ -1,7 +1,7 @@
 // backend/src/routes/todoRoutes.ts
 
 import { Router } from 'express';
-import { todoController } from '../controllers/todo.controller';
+import { todoController } from '@controllers/todo.controller';
 
 // Création d'un Router Express
 const router = Router();

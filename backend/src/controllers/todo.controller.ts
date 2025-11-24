@@ -1,6 +1,6 @@
 
 import { Request, Response } from 'express';
-import { todoService } from '../services/todo.service';
+import { todoService } from '@services/todo.service';
 
 // Similaire à un @Controller en Spring/Java
 export class TodoController {

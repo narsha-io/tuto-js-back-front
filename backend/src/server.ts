@@ -2,7 +2,7 @@
 
 import express from 'express';
 // 1. Importer le routeur que nous venons de créer
-import todoRoutes from './routes/todo.routes';
+import todoRoutes from '@routes/todo.routes';
 
 const app = express();
 const PORT = 3000;

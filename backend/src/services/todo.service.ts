@@ -1,5 +1,5 @@
 
-import { Todo } from '../interfaces/todo';
+import { Todo } from '@interfaces/todo';
 
 const todos: Todo[] = [
     {
