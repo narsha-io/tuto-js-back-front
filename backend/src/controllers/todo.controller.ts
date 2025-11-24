@@ -30,7 +30,6 @@ export class TodoController {
 
         // 2. Appel au service pour créer le Todo
         const newTodo = await todoService.create(creationDto);
-        throw new Error('Simulated error');
 
         // 3. Envoi de la réponse HTTP 201 (Created)
         res.status(201).json(newTodo);
