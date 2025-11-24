@@ -3,6 +3,7 @@
 import express from 'express';
 // 1. Importer le routeur que nous venons de créer
 import todoRoutes from '@routes/todo.routes';
+import { errorHandler } from 'middlewares/error.middleware';
 
 const app = express();
 const PORT = 3000;
@@ -19,7 +20,7 @@ app.get('/', (req, res) => {
     res.json({ message: "API Todo List is running! 🚀" });
 });
 */
-
+app.use(errorHandler);
 // 4. Démarrage du serveur
 app.listen(PORT, () => {
     console.log(`Le serveur tourne sur http://localhost:${PORT}`);
