@@ -9,5 +9,6 @@ const router = Router();
 // Définition de la route GET /
 // Quand une requête GET arrive sur ce chemin, elle est gérée par la méthode getTodos
 router.get('/', todoController.getTodos);
+router.post('/', todoController.createTodo);
 
 export default router;
